@@ -1,3 +1,4 @@
+import { ScaleWrapper } from "../../components/ScaleWrapper";
 import { EventDetailsSection } from "./sections/EventDetailsSection/EventDetailsSection";
 import { GraduationInvitationSection } from "./sections/GraduationInvitationSection/GraduationInvitationSection";
 import { GuestbookMessageSection } from "./sections/GuestbookMessageSection/GuestbookMessageSection";
@@ -6,10 +7,11 @@ import { VenueLocationSection } from "./sections/VenueLocationSection/VenueLocat
 
 export const CorrectPassword = (): JSX.Element => {
   return (
-    <main
-      className="bg-white overflow-hidden w-full min-w-[1440px] min-h-[7276px] relative"
-      data-model-id="17:9"
-    >
+    <ScaleWrapper>
+      <main
+        className="bg-white overflow-hidden w-full min-w-[1440px] min-h-[7276px] relative"
+        data-model-id="17:9"
+      >
       <MemoriesThankYouSection />
       <GuestbookMessageSection />
       <EventDetailsSection />
@@ -34,6 +36,7 @@ export const CorrectPassword = (): JSX.Element => {
           Invitation
         </h1>
       </header>
-    </main>
+      </main>
+    </ScaleWrapper>
   );
 };
