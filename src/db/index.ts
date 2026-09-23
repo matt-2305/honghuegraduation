@@ -43,7 +43,6 @@ function simpleDecrypt(b64: string, key: string): string {
 
 function loadGuests(): Guest[] {
   try {
-    localStorage.removeItem(STORAGE_KEY); // reset to file state
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const decrypted = simpleDecrypt(raw, ADMIN_KEY);
